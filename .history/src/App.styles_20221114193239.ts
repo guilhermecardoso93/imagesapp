@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: #27282f;
   color: #fff;
-  height: 100%;
+  height: 100vh;
 `;
 export const Area = styled.div`
   margin: auto;
@@ -39,7 +39,7 @@ export const PhotoList = styled.div`
 export const UploadForm = styled.form`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-between;
   width: 100%;
   margin: 4rem;
   background-color: #3d3f4d;
@@ -47,14 +47,14 @@ export const UploadForm = styled.form`
   border-radius: 10px;
   margin-bottom: 30px;
 
-  input[type="submit"] {
+  input[type=submit] {
     background-color: #756df4;
     border: 0;
-    color: #fff;
+    color: #FFF;
     padding: 8px 16px;
     font-size: 15px;
     border-radius: 10px;
-    margin: 0 20px;
+    margin:0 20px;
     cursor: pointer;
     transition: 0.2s;
 

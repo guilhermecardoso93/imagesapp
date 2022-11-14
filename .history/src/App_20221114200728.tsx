@@ -17,7 +17,7 @@ export function App() {
     if(file && file.size > 0 ) {
       setUploading(true)
       let result = await Photos.insert(file)
-      setUploading(false)
+      setLoading(false)
 
       if(result instanceof Error ) {
         alert(`${result.name} ${result.message}`)
@@ -34,7 +34,7 @@ export function App() {
     const getPhotos = async () => {
       setLoading(true);
       setPhotos(await Photos.getAll());
-      setLoading(false);
+      setUploading(false);
     };
     getPhotos();
   }, []);
@@ -46,6 +46,7 @@ export function App() {
         <UploadForm method="post" onSubmit={handleFormSubmit}>
           <input type='file' name='image'/>
           <input type='submit' value='Enviar'/>
+          {uploading && "Enviando..."}
         </UploadForm>
 
         {loading && (

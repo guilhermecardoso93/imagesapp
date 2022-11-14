@@ -17,7 +17,7 @@ export function App() {
     if(file && file.size > 0 ) {
       setUploading(true)
       let result = await Photos.insert(file)
-      setUploading(false)
+      setLoading(false)
 
       if(result instanceof Error ) {
         alert(`${result.name} ${result.message}`)

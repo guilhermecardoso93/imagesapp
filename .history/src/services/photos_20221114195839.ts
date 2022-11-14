@@ -40,7 +40,7 @@ export async function insert(file: File) {
     return {
       name: upload.ref.name,
       url: photoUrl,
-    } as PhotoTypes;
+    };
   } else {
     return new Error("Tipo de Arquivo não permitido!");
   }

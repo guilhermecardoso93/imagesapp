@@ -17,15 +17,7 @@ export function App() {
     if(file && file.size > 0 ) {
       setUploading(true)
       let result = await Photos.insert(file)
-      setUploading(false)
-
-      if(result instanceof Error ) {
-        alert(`${result.name} ${result.message}`)
-      } else {
-        let newPhotoList = [...photos]
-        newPhotoList.push(result)
-        setPhotos(newPhotoList)
-      }
+      setLoading(false)
     }
 
   }

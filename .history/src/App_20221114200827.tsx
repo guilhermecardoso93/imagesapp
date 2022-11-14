@@ -46,6 +46,7 @@ export function App() {
         <UploadForm method="post" onSubmit={handleFormSubmit}>
           <input type='file' name='image'/>
           <input type='submit' value='Enviar'/>
+          {uploading && "Enviando..."}
         </UploadForm>
 
         {loading && (

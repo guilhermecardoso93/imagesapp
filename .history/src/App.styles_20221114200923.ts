@@ -39,7 +39,7 @@ export const PhotoList = styled.div`
 export const UploadForm = styled.form`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   margin: 4rem;
   background-color: #3d3f4d;
